@@ -1,52 +1,59 @@
 x = obj_player.x;
 y = obj_player.y;
 
-if(keyboard_check(ord("D")))
+if(keyboard_check_pressed(ord("D")))
 {
-    if(go == true)
-    {
-        go = false;
-        x = x + 16;
-        Xprevious = x - 16;
-    }
+    d = true;
+    a = false;
+    w = false;
+    s = false;
 }
+
+    if(d == true)
+    {
+        x = x + playerMoveSpeed;
+        Xprevious = x - playerMoveSpeed;
+    }
+
+
 if(keyboard_check(ord("A")))
 {
-    if(go == true)
-    {
-        go = false;
-        x = x - 16;
-        Xprevious = x + 16;
-    }
+    a = true;
+    d = false;
+    w = false;
+    s = false;
 }
+    if(a == true)
+    {
+        x = x - playerMoveSpeed;
+        Xprevious = x + playerMoveSpeed;
+    }
+
+    
 if(keyboard_check(ord("W")))
 {
-    if(go == true)
-    {
-        go = false;
-        y = y - 16;
-        Yprevious = y + 16;
-    }
+    w = true;
+    a = false;
+    d = false;
+    s = false;
 }
+    if(w == true)
+    {
+        y = y - playerMoveSpeed;
+        Yprevious = y + playerMoveSpeed;
+    }
+
+
 if(keyboard_check(ord("S")))
 {
-    if(go == true)
+    s = true;
+    a = false;
+    w = false;
+    d = false;
+}
+    if(s == true)
     {
-        go = false;
-        y = y + 16;
-        Yprevious = y - 16;
+        y = y + playerMoveSpeed;
+        Yprevious = y - playerMoveSpeed;
     }
-}
 
-if(go == false)
-{
-    i = i + 1;
-}
-
-if (i == playerSpeed)
-{
-    i = 0;
-    go = true;
-    Xprevious = x;
-    Yprevious = y;
-}

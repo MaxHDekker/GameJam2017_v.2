@@ -1,9 +1,9 @@
 j = 0;
 walk = true;
-enemySpeed = 5;
+enemySpeed = 3;
 
 XpreviousE = x;
 YpreviousE = y;
 
-enemyDirectionX = 16;
+enemyDirectionX = 1 * enemySpeed;
 enemyDirectionY = 0;

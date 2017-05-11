@@ -13,37 +13,29 @@ for (var i = 0; i < instance_number(obj_wall); i++)
         bbox_bottom >= platform.bbox_top
      )
      {
-        if (bbox_bottom - (y - YpreviousE) < platform.bbox_top)
+        if (bbox_bottom - (y - Yprevious) < platform.bbox_top)
         {
             //From Top:
             y = platform.bbox_top - sprite_height /*-0.1*/; //player falls trough top sometimes, -0.1 is what I added
-            y = y - YpreviousE;
-        enemyDirectionY = 0;
-        enemyDirectionX = 1 * enemySpeed;
+            y = Yprevious;
         }
-        else if (bbox_top - (y - YpreviousE) > platform.bbox_bottom)
+        else if (bbox_top - (y - Yprevious) > platform.bbox_bottom)
         {
             //From bottom:
             y = platform.bbox_bottom;
-            y = y + YpreviousE;
-        enemyDirectionY = 0;
-        enemyDirectionX = -1 * enemySpeed;
+            y = Yprevious;
         }
-        else if (bbox_left - (x - XpreviousE) > platform.bbox_right)
+        else if (bbox_left - (x - Xprevious) > platform.bbox_right)
         {
             //From Right:
             x = platform.bbox_right;
-            x = x - XpreviousE;
-        enemyDirectionX = 0;
-        enemyDirectionY = -1 * enemySpeed;
+            x = Xprevious;
         }
-        else if (bbox_right - (x - XpreviousE) < platform.bbox_left)
+        else if (bbox_right - (x - Xprevious) < platform.bbox_left)
         {
             //From Left:
             x = platform.bbox_left - sprite_width;
-            x = x + XpreviousE;
-        enemyDirectionY = 1 * enemySpeed;
-        enemyDirectionX = 0;
+            x = Xprevious;
         }
      }
 }
