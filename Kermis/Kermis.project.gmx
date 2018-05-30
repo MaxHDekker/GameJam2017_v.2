@@ -11,12 +11,19 @@
     <sprite>sprites\spr_enemy</sprite>
     <sprite>sprites\spr_pickup</sprite>
     <sprite>sprites\spr_pickup_attack</sprite>
+    <sprite>sprites\spr_player2</sprite>
+    <sprite>sprites\spr_player3</sprite>
+    <sprite>sprites\spr_player4</sprite>
+    <sprite>sprites\spr_enemy2</sprite>
+    <sprite>sprites\spr_enemy3</sprite>
+    <sprite>sprites\spr_enemy4</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
     <background>background\background1</background>
     <background>background\background2</background>
     <background>background\background3</background>
+    <background>background\background4</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -25,6 +32,9 @@
     <script>scripts\scr_player_outRoom.gml</script>
     <script>scripts\scr_player_OnCreate.gml</script>
     <script>scripts\scr_player_OnStep.gml</script>
+    <script>scripts\scr_levens_draw.gml</script>
+    <script>scripts\scr_player_draw.gml</script>
+    <script>scripts\scr_player_collision_v2.gml</script>
     <script>scripts\scr_player_collision.gml</script>
     <scripts name="enemy">
       <script>scripts\scr_enemy_OnCreate.gml</script>
@@ -33,6 +43,7 @@
       <script>scripts\scr_enemy_movement.gml</script>
       <script>scripts\scr_enemy_collision.gml</script>
       <script>scripts\scr_enemy_collision_topndown.gml</script>
+      <script>scripts\scr_enemy_ondraw.gml</script>
     </scripts>
     <scripts name="pickups">
       <scripts name="punten">
@@ -48,9 +59,6 @@
         <script>scripts\scr_pickup_attack_remove.gml</script>
         <script>scripts\scr_pickup_attack_timer.gml</script>
       </scripts>
-    </scripts>
-    <scripts name="levens">
-      <script>scripts\scr_levens_draw.gml</script>
     </scripts>
   </scripts>
   <fonts name="fonts">
