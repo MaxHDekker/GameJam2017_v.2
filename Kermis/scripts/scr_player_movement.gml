@@ -6,8 +6,8 @@ if(keyboard_check(ord("D")))
     if(go == true)
     {
         go = false;
-        x = x + 16;
-        Xprevious = x - 16;
+        x += 5;
+        Xprevious = x - 1;
     }
 }
 if(keyboard_check(ord("A")))
@@ -15,8 +15,8 @@ if(keyboard_check(ord("A")))
     if(go == true)
     {
         go = false;
-        x = x - 16;
-        Xprevious = x + 16;
+        x -= 5;
+        Xprevious = x + 1;
     }
 }
 if(keyboard_check(ord("W")))
@@ -24,8 +24,8 @@ if(keyboard_check(ord("W")))
     if(go == true)
     {
         go = false;
-        y = y - 16;
-        Yprevious = y + 16;
+        y -= 5;
+        Yprevious = y + 1;
     }
 }
 if(keyboard_check(ord("S")))
@@ -33,8 +33,8 @@ if(keyboard_check(ord("S")))
     if(go == true)
     {
         go = false;
-        y = y + 16;
-        Yprevious = y - 16;
+        y += 5;
+        Yprevious = y - 1;
     }
 }
 

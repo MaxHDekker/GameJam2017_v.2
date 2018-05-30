@@ -1,7 +1,7 @@
 go      = true;
 i       = 0;
 
-playerSpeed = 2;
+playerSpeed = 1;
 
 Yprevious   = 0;
 Xprevious   = 0;
